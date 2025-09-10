@@ -23,6 +23,7 @@ jobs:
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
+      coverage: none
 
     - name: Get composer cache directory
       id: composer-cache
