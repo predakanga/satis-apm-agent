@@ -1,5 +1,6 @@
 name: Build & deploy satis repository
 
+# Grant GITHUB_TOKEN the permissions required to make a Pages deployment
 permissions:
   contents: read
   pages: write
@@ -14,11 +15,11 @@ concurrency:
 
 on: [push]
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		steps:
-		- name: Checkout config
-		  uses: actions/checkout@v5
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout config
+      uses: actions/checkout@v5
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -53,11 +54,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write
-      id-token: write
 
     environment:
       name: github-pages
