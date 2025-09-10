@@ -1,0 +1,12 @@
+{
+    "name": "predakanga/satis-apm-agent",
+    "description": "Composer repository for elastic/apm-agent-php",
+    "homepage": "http://predakanga.github.io/satis-apm-agent",
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/elastic/apm-agent-php"
+        }
+    ],
+    "require-all": true
+}

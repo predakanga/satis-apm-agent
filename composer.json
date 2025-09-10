@@ -1,0 +1,10 @@
+{
+    "require": {
+        "composer/satis": "dev-main"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/satis": true
+        }
+    }
+}
